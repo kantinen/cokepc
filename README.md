@@ -32,3 +32,15 @@ Host cokepc
 ```
 
 Så kan man logge ind ved at køre `ssh cokepc`.
+
+Når maskinen starter op, bliver brugeren `odroid` logget ind i en session, der
+kører scriptet `.xinitrc`.  Vi har vedhæftet vores `.xinitrc` i dette repo; se
+filen `xinitrc` (den er symlinket på odroiden).
+
+Dette scripts primære ansvar er at starte en `tmux`-session der kører
+infoskærmsscriptet, samt starte en enkel window manager.  Hvis du vil tilføje
+andre baggrundsprocesser og deslige, så start dem her.
+
+Et cronjob (`sudo crontab -e`) sørger for at genstarte maskinen hver morgen
+klokken 6.  Dette er for at sikre at der aldrig sniger sig noget ind i
+opsætningen der ikke kan overleve en genstart.
