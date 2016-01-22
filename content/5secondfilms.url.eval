@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# Pick a random 5secondfilm.
+
+id='PLDyKn8uKYtRalFdBWtv_EjDtUo2UEbu-a'
+key='AIzaSyBs-uFOXBoK5CYkXk4VsIUtltH9ve91ig0'
+address="https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$id&maxResults=50&key=$key"
+
+yt_id="$(curl --silent "$address" | grep videoId | sed 's/ //g' | cut -d'"' -f4 | sort -R | head -n 1)"
+
+echo "https://youtube.com/watch?v=$yt_id"
