@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Stallman</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+* {
+  margin: 0;
+}
+  
+body {
+  overflow: hidden;
+  font-family: Gentium;
+}
+
+img {
+  width: 1280px;
+}
+
+p {
+  position: fixed;
+  top: 0;
+}
+
+#intro {
+  color: red;
+  font-size: 120px;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+
+  top: 20px;
+  left: 60px;
+  animation: intro 3s;
+  -webkit-animation: intro 3s;
+}
+
+@keyframes intro {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 60px;
+  }
+}
+
+@-webkit-keyframes intro {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 100px;
+  }
+}
+
+#citat {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 80px;
+  padding: 10px;
+  text-align: center;
+
+  left: 250px;
+  top: 600px;
+  width: calc(1280px - 250px * 2 - 20px);
+  height: 280px;
+  visibility: hidden;
+}
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+var n_images = 23;
+var id = Math.floor(Math.random() * n_images);
+var name = ('000' + id).slice(0, 4)
+document.write('<img src="files/stallman/' + name + '.jpg" alt="Stallman">');
+    </script>
+    <p id="intro">
+      Richard Stallman siger:
+    </p>
+    <p id="citat">
+    <script type="text/javascript">
+var sayings = [
+    "Gør din kode fri!",
+    "Fri software er godt.",
+    "Gå ind på gnu.org.",
+    "Brug Emacs!",
+    "Jeg kan ikke lide begrebet 'open source'.",
+    "Brug hverken Amazon, Apple, Facebook, Skype, Google, Uber, Amtrak, Eventbrite, Meetup, Airbnb, Netflix, Twitter eller Spotify.",
+    "Jeg bruger Emacs!"
+];
+var saying = sayings[Math.floor(Math.random() * sayings.length)];
+document.write(saying);
+    </script>
+    </p>
+    <script type="text/javascript">
+window.setTimeout(function() {
+    document.getElementById("citat").style.visibility = "visible";
+}, 3000);
+    </script>
+  </body>
+</html>
