@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xsetroot -solid white
+feh --bg-scale cokepc/content/cokepc.png
 export PATH=/home/odroid/bin:/usr/local/bin:$PATH
 xdotool mousemove 2000 2000
 
