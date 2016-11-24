@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  @keyframes blink {
+    50% {
+      opacity: 0.0;
+    }
+  }
+  @@keyframes farve {
+    50% {
+      color: #F00
+    }
+  }
+  @-webkit-keyframes blink {
+    50% {
+      opacity: 0.0;
+    }
+  }
+  @-webkit-keyframes farve {
+    50% {
+      color: #F00
+    }
+  }
+
+    #img {
+      width: 90%;
+      height: auto;
+    }
+
+    body {
+      background: black;
+      overflow: hidden;
+    }
+
+    #nvrforget {
+      position: absolute;
+      width: 100%;
+      bottom: 10px;
+      text-align: center;
+      font-size: 90px;
+      color: #0F0;
+      font-weight: bolder;
+      font-style: italic;
+      font-family: cursive, sans-serif;
+      animation: blink 1s step-start 0s infinite;
+      -webkit-animation: blink 1s step-start 0s infinite;
+      -webkit-animation: farve 2s stepstart 0s infinite;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <img id="img"></img>
+  </center>
+  <div id="nvrforget">GOD JUL OG GOD PÅSKE!</div>
+  <script>
+    var gifs = ['CoolJul_01.gif', 'CoolJul_02.gif', 'CoolJul_03.gif', 'CoolJul_04.gif','CoolJul_05.gif'];
+    var randomIndex = Math.floor((Math.random() * gifs.length));
+    document.getElementById('img').setAttribute('src', 'res/' + gifs[randomIndex]);
+  </script>
+</body>
+
+</html>
