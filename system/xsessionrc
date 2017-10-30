@@ -2,8 +2,8 @@
 #
 # Start a new xsession.
 
-# Be boring.
-xsetroot -solid white
+# Use an informational background image.
+feh --bg-center /home/odroid/cokepc/content/cokepc.png
 
 # We might have some local binaries in ~/bin/, e.g. a custom surf.
 export PATH=/home/odroid/bin:/usr/local/bin:$PATH
