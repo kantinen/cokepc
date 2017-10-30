@@ -17,13 +17,13 @@ Maskinen har en opløsning på 1280x1024, så design efter det.
 Bidrag!
 -------
 
-Vil du lægge noget på infoskærmen?  Det tager ikke så lang tid:
+Vil du lægge noget på cokepc'en?  Det tager ikke så lang tid:
 
   1. Opret en bruger på GitHub.
   2. Fork dette repo til din egen bruger (der er en knap øverst i højre hjørne).
   3. Commit og push dine ændringer til din fork.  Accepterede filformater står
      beskrevet i <https://github.com/datalogisk-kantineforening/kantinfo>.
-  4. Lav et pull request til infoscreen-repoet med indholdet af din fork (der er
+  4. Lav et pull request til cokepc-repoet med indholdet af din fork (der er
      en knap "New pull request" på denne side).
 
 
