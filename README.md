@@ -49,22 +49,27 @@ Host cokepc
 Så kan man logge ind ved at køre `ssh cokepc`.
 
 Når maskinen starter op, bliver brugeren `odroid` logget ind i en session, der
-kører scriptet `.xinitrc`.  Vi har vedhæftet vores `.xinitrc` i dette repo; se
-filen `xinitrc` (den er symlinket på odroiden).
+kører scriptet `.xsessionrc`.  Vi har vedhæftet vores `.xsessionrc` i dette
+repo; se filen `xsessionrc` i `system`-mappen (den er symlinket på odroiden).
 
 Dette scripts primære ansvar er at starte en `tmux`-session der kører
 infoskærmsscriptet, samt starte en enkel window manager.  Hvis du vil tilføje
 andre baggrundsprocesser og deslige, så start dem her.
 
-Et cronjob (`sudo crontab -e`) sørger for at genstarte maskinen hver morgen
-klokken 6.  Dette er for at sikre at der aldrig sniger sig noget ind i
-opsætningen der ikke kan overleve en genstart.
+Et cronjob (`sudo crontab -e`) sørger for at genstarte maskinen en gang om ugen.
+Dette er for at sikre at der aldrig sniger sig noget ind i opsætningen der ikke
+kan overleve en genstart.
+
+Filen `/usr/share/lightdm/lightdm.conf.d/60-lightdm-gtk-greeter.conf` logger
+brugeren odroid ind og slår skærmenstrømbesparingsmekanismen fra, hvis denne af
+en grund skulle være blevet slået til.  Vi har vedhæftet filen i repoet i
+`system`-mappen.
 
 
 Afhængigheder
 -------------
 
-Vores `xinitrc` afhænger af disse programmer:
+Vores `xsessionrc` afhænger af disse programmer:
 
   + `matchbox`: Simpel window manager
   + `xdotool`: Musemarkør-skjuler (mm.)
