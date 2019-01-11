@@ -34,7 +34,7 @@ Opsætning
 
 `cokepc` er en Odroid som er monteret bag skærmen i kantinen.  Man kan logge ind
 på maskinen ved at ssh'e til `odroid@diku.kantinen.org` og derfra ssh'e videre
-til `cokepc` (eftersom K@ntinen har mere end én Odroid).  Niels skal have ens
+til `cokepc` (eftersom K@ntinen har mere end én Odroid).  Kantinen skal have ens
 offentlige nøgle før dette virker.  Løsenet på maskinen for `odroid`-brugeren er
 bare `odroid`.  Hvis man vil automatisere denne loggen ind, kan man indtaste
 følgende i filen `.ssh/config` på din egen maskine:
